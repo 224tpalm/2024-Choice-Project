@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bowlby One SC">
+  <link href='https://fonts.googleapis.com/css?family=Bubblegum Sans' rel='stylesheet'>
+  <title>Professional Image Gallery</title>
+  <style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #f18900;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #fac989;
+  color: white;
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: white;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.pagination a.active {
+  background-color: #f18900;
+  color: white;
+  border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #fac989;
+  border-radius: 5px;
+}
+
+button, a {
+  font-family: 'Bowlby One SC';
+}
+
+p {
+  font-family: 'Bubblegum Sans';
+}
+
+h1 {
+  text-transform: uppercase;
+  font-family: 'Bowlby One SC';
+  letter-spacing: 2px;
+}
+  </style>
+</head>
+<body>
+  <video autoplay muted loop id="myVideo">
+    <source src="nature_-_92718 (Original).mp4" type="video/mp4">
+  </video>
+  
+  <div class="content">
+    <h1>2023-2024 Photo Gallery</h1>
+  <p>Lets take a look and reminsice on the past year. Despite its many ups and downs, it brought numerous memories, laughs, and experiecnes.</p>
+    <button id="myBtn" onclick="myFunction()">PAUSE</button><br><br><br>
+    <div class="pagination">
+      <a href="2024.html" class="active">Home</a>
+      <a href="2023.html">2023</a>
+      <a href="20241.html">2024</a>
+    </div>
+    <br><br><br>
+  </div>
+
+  
+  <script>
+    var video = document.getElementById("myVideo");
+    var btn = document.getElementById("myBtn");
+    
+    function myFunction() {
+      if (video.paused) {
+        video.play();
+        btn.innerHTML = "Pause";
+      } else {
+        video.pause();
+        btn.innerHTML = "Play";
+      }
+    }
+    </script>
+    
+
+</body>
+</html>
